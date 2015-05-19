@@ -16,24 +16,10 @@
     <div class="main" ng-controller="MainController">
       <div class="container">
         <div class="content">
-
-          <!--
-          TODO: Loop through shows and display each one with this HTML
-          <div>
-            <div class="rank">{{$index + 1}}</div>
-            
-            </div>
-          -->
           <div ng-repeat="show in shows">
-          <div class="img_container">
-  <img class="img-responsive" ng-src="{{show.series_img}}">
-</div>
-<h2 class="series">{{show.series}}</h2>
-<p class="genre">{{show.genre}}</p>
-<p class="run-start">{{show.run_start}}</p>
-<p class="description">{{show.description}}</p>
-</div>
-
+            <div class="rank">{{$index + 1}}</div>
+            <tv-show show="show"></tv-show>
+          </div>
         </div>
       </div>
     </div>
@@ -44,8 +30,8 @@
     <!-- Controllers -->
     <script src="js/controllers/MainController.js"></script>
 
-    <!-- Directives <script src="js/directives/tvShow.js"></script>-->
-    
+    <!-- Directives -->
+    <script src="js/directives/tvShow.js"></script>
 
     <!-- Services -->
     <script src="js/services/shows.js"></script>
