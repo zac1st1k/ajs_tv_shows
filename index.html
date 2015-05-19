@@ -6,14 +6,14 @@
     <link href="css/main.css" rel="stylesheet" />
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
   </head>
-  <body>
+  <body ng-app="Top10App">
     <div class="header">
       <div class="container">
         10
       </div>
     </div>
 
-    <div class="main">
+    <div class="main" ng-controller="MainController">
       <div class="container">
         <div class="content">
 
@@ -24,6 +24,15 @@
             
             </div>
           -->
+          <div ng-repeat="show in shows">
+          <div class="img_container">
+  <img class="img-responsive" ng-src="{{show.series_img}}">
+</div>
+<h2 class="series">{{show.series}}</h2>
+<p class="genre">{{show.genre}}</p>
+<p class="run-start">{{show.run_start}}</p>
+<p class="description">{{show.description}}</p>
+</div>
 
         </div>
       </div>
@@ -35,10 +44,10 @@
     <!-- Controllers -->
     <script src="js/controllers/MainController.js"></script>
 
-    <!-- Directives -->
+    <!-- Directives <script src="js/directives/tvShow.js"></script>-->
     
 
     <!-- Services -->
-    
+    <script src="js/services/shows.js"></script>
   </body>
 </html>
