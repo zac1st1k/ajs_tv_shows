@@ -28,8 +28,10 @@ body, html {
     font-size: 200px;
     height: 200px;
     margin: 0;
-    padding: 30px;
+    padding: 0px;
     width: 200px;
+    text-align: center;
+    line-height: 200px;
 }
 
 div.ng-scope {
@@ -49,7 +51,7 @@ div.ng-scope {
     height: 100%;
     max-width: 9999px;
     position: relative;
-    width: auto;
+    /*width: auto;*/
 }
 
 h2 {
@@ -64,9 +66,9 @@ h2 {
     width: 200px;
 }
 
-div.ng-scope:nth-child(odd) h2 {
+/*div.ng-scope:nth-child(odd) h2 {
     width: 400px;
-}
+}*/
 
 div.ng-scope:nth-child(even) p+p {
     width: 400px;
@@ -92,4 +94,43 @@ div.ng-scope p+p+p {
     color: #fff;
     font-size: 14px;
     width: 800px;
+}
+
+.run-start{
+    width: 200px;
+}
+
+div.ng-scope p+p+p {
+    width: 600px;
+}
+
+.img_container {
+    width: 400px;
+}
+
+.img_container img.img-responsive {
+    width: 400px;
+}
+
+h2 {
+    width: 400px;
+    padding: 30px 10px 0px 10px;
+}
+
+div.ng-scope:nth-child(even) .run-start {
+    width: 200px;
+}
+
+.rank, .img_container, h2, p, run-start, .description {
+    border-bottom: 1px solid white;
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        font-size: 100px;
+        font-weight: 350;
+    }
+    .rank, .img_container, h2, p, run-start, .description {
+        max-width: 200px !important;
+    }
 }
